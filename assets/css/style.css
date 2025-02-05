@@ -963,7 +963,7 @@ section {
   position: fixed; /* Keep it fixed */
   left: 20px; /* Distance from left */
   bottom: 20px; /* Distance from bottom */
-  background: #2a2a2a;
+  background: #000000;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -979,6 +979,19 @@ section {
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
 
+body.dark-theme #hero h1,
+body.dark-theme #hero p {
+  color: #ffffff; /* Ensure maximum brightness in dark mode */
+}
+
+body.dark-theme #hero .social-links a {
+  color: #ffffff;
+}
+
+body.dark-theme #hero .social-links a:hover {
+  color: #3a9bff;
+}
+
 /* Dark theme styles - fix white spots */
 body.dark-theme {
   background-color: #1a1a1a !important;
@@ -987,8 +1000,8 @@ body.dark-theme {
 
 /* Fix navbar in dark mode */
 body.dark-theme #header {
-  background: #1a1a1a !important;
-  border-right: 1px solid #2d2d2d;
+  background: #1a1a1a00 !important;
+  border-right: 1px solid #00000000;
 }
 
 /* Fix all sections and elements in dark mode */
@@ -1008,7 +1021,7 @@ body.dark-theme .portfolio-details {
 /* Fix navigation menu in dark mode */
 body.dark-theme .nav-menu a,
 body.dark-theme .nav-menu a:focus {
-  background: #2a2a2a;
+  background: #191919;
   color: #fff;
 }
 
@@ -1094,7 +1107,7 @@ body.dark-theme .skills .progress-bar-wrap {
 
 /* Fix mobile nav toggle in dark mode */
 body.dark-theme .mobile-nav-toggle {
-  color: #fff;
+  color: #ffffff;
 }
 
 /* Theme toggle button states */
@@ -1103,10 +1116,118 @@ body.dark-theme .mobile-nav-toggle {
 }
 
 body.dark-theme .theme-toggle {
+  background: #ffffff;
+  color: #ffffff;
+}
+
+body.dark-theme .theme-toggle:hover {
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Contact form dark theme styles */
+body.dark-theme .contact .php-email-form {
+  background: #2a2a2a;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+body.dark-theme .contact .php-email-form input,
+body.dark-theme .contact .php-email-form textarea {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+body.dark-theme .contact .php-email-form input:focus,
+body.dark-theme .contact .php-email-form textarea:focus {
+  border-color: #0563bb;
+  background: #222;
+}
+
+/* Placeholder text color */
+body.dark-theme .contact .php-email-form input::placeholder,
+body.dark-theme .contact .php-email-form textarea::placeholder {
+  color: #888;
+}
+
+/* Submit button in dark theme */
+body.dark-theme .contact .php-email-form button[type="submit"] {
+  background: #0563bb;
+  border: 0;
+  padding: 12px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  margin-top: 10px;
+}
+
+body.dark-theme .contact .php-email-form button[type="submit"]:hover {
+  background: #0678e3;
+}
+
+/* Form validation messages */
+body.dark-theme .contact .php-email-form .error-message {
+  background: #ed3c0d;
+  color: #fff;
+}
+
+body.dark-theme .contact .php-email-form .sent-message {
+  background: #18d26e;
+  color: #fff;
+}
+
+body.dark-theme .contact .php-email-form .loading {
   background: #2a2a2a;
   color: #fff;
 }
 
-body.dark-theme .theme-toggle:hover {
-  background: #363636;
+/* Contact info section */
+body.dark-theme .contact .info {
+  background: #2a2a2a;
+  padding: 30px;
+  border-radius: 8px;
 }
+
+body.dark-theme .contact .info i {
+  background: #1a1a1a;
+  color: #0563bb;
+}
+
+body.dark-theme .contact .info h4 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+body.dark-theme .contact .info p {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+/* Hover effects */
+body.dark-theme .contact .info .email:hover i,
+body.dark-theme .contact .info .address:hover i,
+body.dark-theme .contact .info .phone:hover i {
+  background: #0563bb;
+  color: #fff;
+}
+
+
+body.dark-theme .section-title h2 {
+  color: #0066ff; /* Much brighter red */
+  text-shadow: 0 0 20px rgba(183, 183, 183, 0.6); /* Increased glow effect */
+}
+
+/* Hover state for even more brightness */
+body.dark-theme .resume .resume-item h4:hover,
+body.dark-theme .skills .skill:hover {
+  color: #ffffff; /* Super bright on hover */
+  text-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+
+
